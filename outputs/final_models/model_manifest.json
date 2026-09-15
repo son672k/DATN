@@ -1,0 +1,39 @@
+{
+  "files": [
+    "best_yolo.pt",
+    "best_cnn.pth",
+    "best_lstm.pth"
+  ],
+  "face_detector": {
+    "name": "MediaPipe Face Detection",
+    "packaged_checkpoint": false,
+    "purpose": "face ROI only; not counted as a trained project model"
+  },
+  "yolo_classes": {
+    "0": "Open Eye",
+    "1": "Closed Eye",
+    "2": "Cigarette",
+    "3": "Phone",
+    "4": "Seatbelt"
+  },
+  "cnn": {
+    "model_name": "efficientnet_b0",
+    "feature_dim": 1280,
+    "class_names": [
+      "awake",
+      "drowsy"
+    ],
+    "split": "subject-wise NTHU"
+  },
+  "lstm": {
+    "input_dim": 1280,
+    "hidden_dim": 128,
+    "num_layers": 2,
+    "seq_len": 16,
+    "class_names": [
+      "awake",
+      "drowsy"
+    ],
+    "split": "subject-wise NTHU"
+  }
+}

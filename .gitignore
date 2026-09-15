@@ -1,0 +1,128 @@
+﻿# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+.eggs/
+pip-wheel-metadata/
+
+# ── Môi trường ảo ────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Model weights & dataset (quá lớn cho git) ───────────────
+outputs/*
+!outputs/.gitkeep
+!outputs/final_models/
+data/*
+!data/.gitkeep
+!data/test_videos/
+models/*
+!models/.gitkeep
+!models/face_landmarker.task
+!models/blaze_face_short_range.tflite
+
+# ── Kết quả training (zip) ───────────────────────────────────
+*.zip
+
+# ── Database / backup ────────────────────────────────────────
+backups/*
+!backups/.gitkeep
+backend/data/*
+!backend/data/.gitkeep
+*.dump
+pre_mysql_backup*/
+
+# ── File nội bộ dự án ────────────────────────────────────────
+CONTEXT.md
+NEXT_SESSION_START_HERE.md
+REDESIGN_THEO_GOP_Y_GVHD.md
+.agents/
+skills-lock.json
+.poster_build/
+.presentation_build/
+archive/
+
+# ── Báo cáo / tài liệu nội bộ (không thuộc source code) ─────
+docs/
+22050058_LeHuuSon_BaoCaoTienDo.docx
+"LeHuuSon - De cuong Do an tot nghiep.docx"
+"~$*.docx"
+packages_before_cuda.txt
+
+# ── Training notebook ────────────────────────────────────────
+main-train.ipynb
+
+# ── Web Dashboard (Next.js) ──────────────────────────────────
+web_dashboard/node_modules/
+web_dashboard/.next/
+web_dashboard/dist/
+web_dashboard/build/
+web_dashboard/.openai/
+web_dashboard/.vinext/
+web_dashboard/.wrangler/
+web_dashboard/tsconfig.tsbuildinfo
+
+# ── Mobile App (Flutter) ─────────────────────────────────────
+mobile_app/build/
+mobile_app/.dart_tool/
+mobile_app/.idea/
+mobile_app/.flutter-plugins
+mobile_app/.flutter-plugins-dependencies
+
+# ── Môi trường & secret ──────────────────────────────────────
+.env
+.env.local
+.env.*.local
+backend/.env
+users.json
+
+# ── IDE / hệ điều hành ──────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Output runtime ───────────────────────────────────────────
+outputs/backend_sessions/*
+!outputs/backend_sessions/.gitkeep
+outputs/edge_sessions/*
+!outputs/edge_sessions/.gitkeep
+outputs/app_logs/
+outputs/daily_reports/
+outputs/report_figures/
+outputs/cnn_nthu/
+outputs/yolo/
+outputs/lstm/
+outputs/lstm_data/
+outputs/qa_teacher_features/
+outputs/video_smoke/
+outputs/video_test/
+
+# ── Bao cao / tai lieu (thuoc GDrive, khong phai source code) ─
+"22050058_Le Huu Son.docx"
+"LeHuuSon - De cuong Do an tot nghiep.docx"
+"Huong dan thuc hien do an tot nghiep_DONE.pdf"
+"~$*"
+
+# ── Slide ban nhap ───────────────────────────────────────────
+presentation/*TruocKhi*.pptx
+
+# ── Poster ban nguon PPT ─────────────────────────────────────
+poster/*.pptx
+
+# ── Video upload cua nguoi dung (runtime) ───────────────────
+data/test_videos/uploads/
+
+# ── web_dashboard co git rieng - dung submodule neu can ─────
+web_dashboard/
+
+# ── Script xuat GDrive (noi bo) ─────────────────────────────
+export_for_gdrive.ps1

@@ -1,0 +1,50 @@
+{
+  "face": {
+    "min_confidence": 0.5,
+    "padding": 0.08,
+    "bbox_ema_alpha": 0.65
+  },
+  "face_geometry": {
+    "ear_threshold": 0.2,
+    "mar_threshold": 0.35,
+    "blink_min_samples": 2,
+    "yawn_min_samples": 3,
+    "yawn_min_seconds": 0.8,
+    "microsleep_seconds": 1.5,
+    "head_pitch_threshold": 25.0,
+    "head_yaw_threshold": 30.0,
+    "gaze_threshold": 0.45,
+    "distraction_min_seconds": 3.0
+  },
+  "behavior_yolo": {
+    "confidence": 0.25,
+    "image_size": 640,
+    "phone_confidence": 0.55,
+    "phone_window_size": 3,
+    "phone_min_hits": 2,
+    "phone_clear_misses": 2,
+    "cigarette_confidence": 0.5,
+    "cigarette_window_size": 3,
+    "cigarette_min_hits": 2,
+    "cigarette_clear_misses": 2
+  },
+  "temporal_filter": {
+    "window_size": 8,
+    "enter_drowsy": 0.65,
+    "exit_drowsy": 0.45,
+    "min_observations": 4
+  },
+  "perclos": {
+    "window_size": 150,
+    "window_seconds": 60.0,
+    "min_duration_seconds": 10.0,
+    "min_observations": 30,
+    "threshold": 0.4
+  },
+  "scoring": {
+    "yawn_score": 15,
+    "microsleep_score": 50,
+    "distraction_score": 20,
+    "infer_no_seatbelt_from_absence": false
+  }
+}

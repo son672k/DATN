@@ -1,0 +1,27 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: dms-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: dms
+      MYSQL_USER: dms_app
+      MYSQL_PASSWORD: change-me-before-deploying
+      MYSQL_ROOT_PASSWORD: change-root-password-before-deploying
+      TZ: Asia/Ho_Chi_Minh
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - dms_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u dms_app -p$$MYSQL_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 30s
+
+volumes:
+  dms_mysql_data:
