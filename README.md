@@ -1,4 +1,4 @@
-﻿# DMS — Driver Monitoring System
+# DMS — Driver Monitoring System
 
 > **Đồ án tốt nghiệp** — Lê Hữu Sơn (22050058)
 
@@ -6,15 +6,17 @@ Hệ thống giám sát tài xế theo thời gian thực sử dụng YOLO + CNN
 
 ## Kiến trúc tổng thể
 
-```
-Camera cabin / Video
-        ↓
-  Edge Simulator  ──── AI: YOLO + CNN + LSTM + MediaPipe ────┐
-        │                                                     │
-        └──── FastAPI (Python) ──── MySQL ──── Web Dashboard  │
-                                          └─── Mobile App    │
-                                               (Flutter)     │
-        ◄──────────────────────────── Cảnh báo real-time ────┘
+```mermaid
+flowchart TD
+    A[Camera cabin / Video] --> B[Edge Simulator]
+    B --> C["AI: YOLO + CNN + LSTM + MediaPipe"]
+    C --> D["FastAPI (Python)"]
+    D --> E[(MySQL)]
+    E --> F[Web Dashboard]
+    E --> G["Mobile App (Flutter)"]
+    F --> H[Cảnh báo real-time]
+    G --> H
+    H --> B
 ```
 
 ## Ba mô hình AI
@@ -115,5 +117,7 @@ Chi tiết từng bước tại [TRAINING_GUIDE.md](TRAINING_GUIDE.md).
 
 ## Tác giả
 
-**Lê Hữu Sơn** — MSSV 22050058  
+**Sinh viên:** Lê Hữu Sơn — MSSV 22050058  
+**Giảng viên hướng dẫn:** ThS. Dương Anh Tuấn  
+**Trường:** Đại học Bình Dương  
 Đồ án tốt nghiệp, 2026
